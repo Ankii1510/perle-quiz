@@ -32,6 +32,38 @@
   margin: 14px auto 0;
   border-radius: 2px;
 }
+/* ===== Banner icon layout ===== */
+.banner-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.banner-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(139, 246, 255, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.banner-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(139, 246, 255, 0.4);
+}
+
+/* Auto resize for mobile */
+@media (max-width: 600px) {
+  .banner-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .banner-title {
+    font-size: 1.7rem;
+  }
+}
 
 /* ===== Base layout ===== */
 body {
