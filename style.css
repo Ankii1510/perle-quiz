@@ -1,4 +1,43 @@
-/* simplified from full version above for brevity */body{font-family:Inter,sans-serif;background:#0b0c10;color:#fff;margin:0;display:flex;justify-content:center;align-items:flex-start;height:100vh;padding:32px}
+/* simplified from full version above for brevity */
+/* ===== Banner styling ===== */
+.banner {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px 0 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.banner-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #8bf6ff;
+  text-shadow: 0 0 20px rgba(139, 246, 255, 0.4);
+  margin: 0;
+}
+
+.banner-sub {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #a0aab8;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.banner::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 246, 255, 0.6), transparent);
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+
+body{font-family:Inter,sans-serif;background:#0b0c10;color:#fff;margin:0;display:flex;justify-content:center;align-items:flex-start;height:100vh;padding:32px}
 .app{width:90%;max-width:760px}
 .card{background:#18181d;border-radius:16px;padding:20px;margin-bottom:16px}
 .btn{border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:600}
