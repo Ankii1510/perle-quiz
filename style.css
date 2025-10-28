@@ -1,4 +1,3 @@
-/* simplified from full version above for brevity */
 /* ===== Banner styling ===== */
 .banner {
   width: 100%;
@@ -8,7 +7,6 @@
   position: relative;
   z-index: 2;
 }
-
 .banner-title {
   font-size: 2.2rem;
   font-weight: 800;
@@ -17,7 +15,6 @@
   text-shadow: 0 0 20px rgba(139, 246, 255, 0.4);
   margin: 0;
 }
-
 .banner-sub {
   margin-top: 6px;
   font-size: 0.9rem;
@@ -26,7 +23,6 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
-
 .banner::after {
   content: "";
   display: block;
@@ -37,13 +33,165 @@
   border-radius: 2px;
 }
 
-body{font-family:Inter,sans-serif;background:#0b0c10;color:#fff;margin:0;display:flex;justify-content:center;align-items:flex-start;height:100vh;padding:32px}
-.app{width:90%;max-width:760px}
-.card{background:#18181d;border-radius:16px;padding:20px;margin-bottom:16px}
-.btn{border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:600}
-.btn.primary{background:#7ce8ff;color:#000}
-.btn.secondary{background:transparent;border:1px solid #7ce8ff;color:#7ce8ff}
-.hidden{display:none}
-.quiz-area{min-height:200px}
-.progress{background:#222;border-radius:8px;height:8px;overflow:hidden}
-.progress__fill{height:100%;background:#7ce8ff;transition:width .3s}
+/* ===== Base layout ===== */
+body {
+  font-family: "Inter", sans-serif;
+  background: #0b0c10;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+.app {
+  width: 100%;
+  max-width: 760px;
+}
+
+.card {
+  background: #18181d;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.btn {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.primary {
+  background: #7ce8ff;
+  color: #000;
+}
+.btn.secondary {
+  background: transparent;
+  border: 1px solid #7ce8ff;
+  color: #7ce8ff;
+}
+.hidden {
+  display: none;
+}
+
+/* ===== Quiz Layout ===== */
+.quiz-area {
+  min-height: 200px;
+}
+
+.progress {
+  background: #222;
+  border-radius: 8px;
+  height: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.progress__fill {
+  height: 100%;
+  background: #7ce8ff;
+  transition: width 0.3s;
+}
+
+/* ===== Question & Options ===== */
+.question-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.q-title {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+}
+.q-sub {
+  font-size: 13px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* each option block */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+.option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  background: transparent;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.option:hover {
+  background: rgba(124, 232, 255, 0.05);
+}
+.option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.option .label {
+  line-height: 1.3;
+  font-size: 15px;
+}
+.option.selected {
+  background: linear-gradient(90deg, rgba(124, 232, 255, 0.08), rgba(123, 108, 255, 0.04));
+  border-color: rgba(124, 232, 255, 0.16);
+}
+
+/* ===== Controls ===== */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* ===== Result Card ===== */
+.result-card {
+  text-align: center;
+}
+.result-summary {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+.score-badge {
+  background: linear-gradient(90deg, #0ff3d0, #7ce8ff);
+  color: #012;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  display: inline-block;
+}
+.score-message {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 6px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .banner-title { font-size: 1.8rem; }
+  .q-title { font-size: 16px; }
+  .option .label { font-size: 14px; }
+}
