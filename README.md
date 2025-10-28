@@ -7,7 +7,7 @@ Test your understanding of data labeling best practices — no login, no wallet,
 ---
 
 ## 🚀 Demo
-**Live App:** [https://perle-quiz.vercel.app](https://perle-quiz.vercel.app)  
+**Live App:** [https://perle-quiz.vercel.app](https://perle-quiz-psi.vercel.app/)  
 (Deploy it yourself using Vercel — instructions below.)
 
 ![Preview Screenshot](./preview.png)
@@ -33,3 +33,4 @@ Test your understanding of data labeling best practices — no login, no wallet,
 ---
 
 ## 📂 Folder Structure
+
