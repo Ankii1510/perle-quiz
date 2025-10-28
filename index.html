@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Are You Perle-Ready? — Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">🔷</div>
+        <div>
+          <h1>Are You <span class="accent">Perle-Ready</span>?</h1>
+          <p class="tag">10 quick questions • no login • maker-friendly</p>
+        </div>
+      </div>
+      <nav><button id="btn-reset" class="ghost">Reset progress</button></nav>
+    </header>
+    <section class="card quiz-card" aria-live="polite">
+      <div class="progress-row">
+        <div id="progressText">Question 1 of 10</div>
+        <div class="progress"><div id="progressBar" class="progress__fill" style="width:0%"></div></div>
+      </div>
+      <div id="quizContainer" class="quiz-area"></div>
+      <div class="controls">
+        <button id="prevBtn" class="btn secondary" disabled>← Previous</button>
+        <button id="nextBtn" class="btn primary">Next →</button>
+      </div>
+    </section>
+    <section id="resultCard" class="card result-card hidden">
+      <h2 id="resultTitle">Your Score</h2>
+      <div id="resultSummary" class="result-summary"></div>
+      <div class="result-meta">
+        <div id="scoreBadge" class="score-badge">0 / 10</div>
+        <div id="scoreMessage" class="score-message">—</div>
+      </div>
+      <div class="result-actions">
+        <button id="retryBtn" class="btn secondary">Retry Quiz</button>
+        <button id="shareBtn" class="btn primary">Share on X</button>
+      </div>
+      <p class="small muted">High score is stored locally on this device.</p>
+    </section>
+    <footer class="footer"><small>Made with ♥ for creators • No wallet needed</small></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
